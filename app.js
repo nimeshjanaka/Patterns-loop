@@ -337,31 +337,3 @@ for (let i = 1; i <= rowss; i++) {
 }
 
 console.log(outputss);
-
-// Pascal's triangle
-let rowss1 = 4;
-let outputss1 = "";
-
-let pascal = [];
-
-for (let i = 0; i < rowss1; i++) {
-  pascal[i] = [];
-
-  for (let f = 0; f < rowss1 - i - 1; f++) {
-    outputss1 += "  ";
-  }
-
-  for (let j = 0; j <= i; j++) {
-    if (j === 0 || j === i) {
-      pascal[i][j] = 1;
-    } else {
-      pascal[i][j] = pascal[i - 1][j - 1] + pascal[i - 1][j];
-    }
-
-    outputss1 += pascal[i][j] + "   ";
-  }
-
-  outputss1 += "\n";
-}
-
-console.log(outputss1);
